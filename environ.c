@@ -38,8 +38,8 @@ char *_get_environ(vars_t *var, const char *name)
   * _set_environ - function to sets environment variable.
   * @var: parameter structure.
   *
-  * Return: 0 success, 
- */
+  * Return: 0 success
+  */
 int _set_environ(vars_t *var)
 {
 	if (var->argc != 3)

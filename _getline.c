@@ -12,7 +12,7 @@ ssize_t input_buff(vars_t *var, char **buff, size_t *len)
 	ssize_t bytes = 0;
 	size_t len_p = 0;
 
-	if (!*len) 
+	if (!*len)
 	{
 		free(*buff);
 		*buff = NULL;
@@ -49,14 +49,14 @@ ssize_t input_buff(vars_t *var, char **buff, size_t *len)
  */
 ssize_t get_input(vars_t *var)
 {
-	static char *buff; 
+	static char *buff;
 	static size_t i, j, len;
 	ssize_t b = 0;
 	char **buff_p = &(var->arg), *p;
 
 	_putchar(BUFF_FLUSH);
 	b = input_buff(var, &buff, &len);
-	if (b == -1) /* EOF */
+	if (b == -1)
 		return (-1);
 	if (len)
 	{
@@ -135,7 +135,7 @@ int _getline(vars_t *var, char **ptr, size_t *length)
 	c = _strchr(buff + i, '\n');
 	k = c ? 1 + (unsigned int)(c - buff) : len;
 	new_p = _realloc(p, l, l ? l + k : k + 1);
-	if (!new_p) /* MALLOC FAILURE! */
+	if (!new_p)
 		return (p ? free(p), -1 : -1);
 
 	if (l)

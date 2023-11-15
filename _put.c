@@ -3,7 +3,7 @@
 /**
  * _eputs - prints input string
  * @str: the string
- * 
+ *
  * Return: void
  */
 void _eputs(char *str)
