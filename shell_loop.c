@@ -11,13 +11,12 @@ int shell_loop(vars_t *var, char **av)
 {
 	ssize_t j = 0;
 	int builtin_return = 0;
-	char *prompt = "#cisfun$ ";
 
 	while (j != -1 && builtin_return != -2)
 	{
 		clear_var(var);
 		if (is_interactive(var))
-			_puts(prompt);
+			_puts("#cisfun$ ");
 		_eputchar(BUFF_FLUSH);
 		j = get_input(var);
 		if (j != -1)

@@ -49,7 +49,17 @@ void _puts(char *str)
  */
 int _putchar(char c)
 {
-	return (write(1, &c, 1));
+	static int x;
+	static char buff[WRITE_BUFF_SIZE];
+
+	if (c == BUFF_FLUSH || x >= WRITE_BUFF_SIZE)
+	{
+		write(2, buff, x);
+		x = 0;
+	}
+	if (c != BUFF_FLUSH)
+		buff[x++] = c;
+	return (1);
 }
 /**
  * starts_with - checks if need starts with hstack

@@ -31,7 +31,6 @@
 #define HIST_MAX	4096
 
 extern char **environ;
-extern char *prompt;
 
 /** 
  * struct liststr - node struct
